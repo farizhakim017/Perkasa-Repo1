@@ -1,0 +1,78 @@
+name: perkasa1
+description: Perkasakan Bahasa Melayu anda.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.5
+  google_fonts: ^4.0.5
+  get: ^4.6.5
+  liquid_swipe: ^3.1.0
+  smooth_page_indicator: ^1.1.0
+  flutter_native_splash: ^2.3.0
+  shared_preferences: ^2.1.1
+  firebase_core: ^2.14.0
+  cloud_firestore: ^4.7.1
+  google_nav_bar: ^5.0.6
+  swipe_cards: ^2.0.0+1
+  liquid_pull_to_refresh: ^3.0.1
+  firebase_auth: ^4.6.3
+  google_sign_in: ^6.1.4
+  lottie: ^2.4.0
+  flutter_rating_bar: ^4.0.1
+  stop_watch_timer: ^2.0.0
+  flutter_colorpicker: ^1.0.3
+  carousel_slider: ^4.2.1
+  provider: ^6.0.5
+  flutter_hooks: any
+  hooks_riverpod: any
+  glass_kit: ^2.0.1
+  confetti: ^0.6.0
+  dots_indicator: ^3.0.0
+  animated_text_kit: ^4.2.2
+  flutter_animate: ^4.2.0+1
+
+
+
+flutter_native_splash:
+  android: true
+  ios: true
+  web: false
+  color: "#ffffff"
+  image: "assets/images/perkasasplash.png"
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+  - assets/images/perkasam-logo.png
+  - assets/images/perkasam-logo (1).png
+  - assets/images/perkasam-logo (3).png
+  - assets/images/perkasam-logo (4).png
+  - assets/images/perkasam-logo no background.png
+  - assets/images/google-image.png
+  - assets/lottie/signin.json
+  - assets/images/perkasa-logo(full no bg).png
+  - assets/images/perkasa-logo(full).png
+  - assets/images/perkasa-logo(only).png
+  - assets/images/sehari selembar benang (perf).png
+  - assets/images/oh-no.jpg
+  - assets/images/please-rate.jpg
+  - assets/images/thank-you.jpg
+  - assets/images/perkasasplash.png
+
+
+  fonts:
+    - family: Klasik
+      fonts:
+        - asset: assets/fonts/Klasik Regular.otf

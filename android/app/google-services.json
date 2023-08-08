@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "597698425602",
+    "project_id": "perkasa1-6c7bc",
+    "storage_bucket": "perkasa1-6c7bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597698425602:android:68bd222a5d33c60265081b",
+        "android_client_info": {
+          "package_name": "com.example.perkasa1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTZwbI5bH2vPfnZUfxusD1IrHy1SA4EIE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
