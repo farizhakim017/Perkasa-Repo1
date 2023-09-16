@@ -9,7 +9,7 @@ import 'package:perkasa1/pages/drawer_pages/whatisperkasa.dart';
 import 'package:perkasa1/pages/profile.dart';
 import 'package:perkasa1/pages/pustaka.dart';
 import 'package:perkasa1/pages/realhomepage.dart';
-import 'package:perkasa1/pages/translatepage.dart';
+import 'package:perkasa1/pages/ujidiri.dart';
 
 import 'main.dart';
 
@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _tabList = [
     PustakaPage(),
     RealHomePage(),
-    TranslatePage(),
+    UjiDiriPage(),
     ProfilePage(),
   ];
 
@@ -67,6 +67,7 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _pages = [
     PustakaPage(),
     RealHomePage(),
+    UjiDiriPage(),
     ProfilePage(),
   ];
 
@@ -386,7 +387,7 @@ class _HomePageState extends State<HomePage> {
                               label: "Utama",
                             ),
                             BottomNavigationBarItem(
-                              icon: Icon(Icons.g_translate_outlined),
+                              icon: Icon(Icons.design_services),
                               label: "Terjemah",
                             ),
                             BottomNavigationBarItem(

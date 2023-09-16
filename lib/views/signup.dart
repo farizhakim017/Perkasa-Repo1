@@ -165,10 +165,11 @@ class _SignUpPageState extends State<SignUpPage> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 20),
               Padding(
-                padding: const EdgeInsets.only(right: 130),
+                padding: const EdgeInsets.only(left: 30),
                 child: Text(
                   'Salam, \nTuan \nHamba',
                   style: GoogleFonts.quicksand(

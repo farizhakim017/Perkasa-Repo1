@@ -275,12 +275,13 @@ class HomePages extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: PepatahBox(),
                         ),
+                        SizedBox(height: 400),
                       ],
                     ),
                   ),
                 ),
               ),
-              SizedBox(height: 50),
+              SizedBox(height: 1000),
             ])));
   }
 }

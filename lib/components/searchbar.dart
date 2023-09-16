@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:perkasa1/pages/library_pages/ayatPenyataPage.dart';
-import 'package:perkasa1/pages/library_pages/ayatPerintahPage.dart';
-import 'package:perkasa1/pages/library_pages/ayatSeruanPage.dart';
-import 'package:perkasa1/pages/library_pages/ayatTanyaPage.dart';
-import 'package:perkasa1/pages/library_pages/kataKerjaPage.dart';
 
-import '../pages/library_pages/KataNamaPage.dart';
-import '../pages/library_pages/kataAdjektifPage.dart';
-import '../pages/library_pages/kataTugas.dart';
+import '../pages/library.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen(BuildContext context, {super.key});

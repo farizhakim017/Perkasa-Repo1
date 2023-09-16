@@ -1,10 +1,10 @@
 // ignore_for_file: unused_local_variable, use_key_in_widget_constructors, use_build_context_synchronously, prefer_const_constructors, avoid_print, must_be_immutable
 
-import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:perkasa1/views/signup.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../components/mytextfield.dart';
 
@@ -147,10 +147,11 @@ class RegisterPage extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 20),
               Padding(
-                padding: const EdgeInsets.only(right: 35),
+                padding: const EdgeInsets.only(left: 35),
                 child: Text(
                   'Salam \nPerkenalan, \nAyuh! \nDaftar Masuk.',
                   style:
@@ -208,7 +209,7 @@ class RegisterPage extends StatelessWidget {
                             : const Text(
                                 'Daftar Masuk',
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: Color(0xFF321C8B),
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                 ),

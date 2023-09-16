@@ -17,26 +17,6 @@ class _UjiDiriPageState extends State<UjiDiriPage> {
     return DefaultTabController(
         length: 2,
         child: Scaffold(
-          appBar: AppBar(
-            leading: IconButton(
-              icon: Icon(
-                Icons.arrow_back,
-                color: Color(0xFF321C8B),
-              ),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-            title: const Text(
-              'Uji Diri.',
-              style: TextStyle(
-                color: Color(0xFF321C8B),
-              ),
-            ),
-            backgroundColor: Colors.transparent,
-            elevation: 0,
-            centerTitle: true,
-          ),
           body: Column(children: [
             TabBar(
               indicatorColor: Colors.blue,

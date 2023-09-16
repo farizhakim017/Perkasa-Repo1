@@ -2,6 +2,7 @@
 
 import 'dart:async';
 import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -27,11 +28,11 @@ class _FirstUjiDiriPageState extends State<FirstUjiDiriPage> {
     '"Faktor pelajar tidak mahu melanjutkan pelajaran"',
   ];
 
-  String randomString = '';
+  String randomString = '...';
 
   void pickRandomString() {
     setState(() {
-      randomString = ''; // Clear the result before picking a new random string
+      randomString = '???';
     });
 
     Timer(Duration(seconds: 1), () {
@@ -49,14 +50,14 @@ class _FirstUjiDiriPageState extends State<FirstUjiDiriPage> {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
-            SizedBox(height: 40),
+            SizedBox(height: 18),
             Container(
               child: Text(
                 'Sila berikan..',
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 30),
             Container(
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -87,38 +88,100 @@ class _FirstUjiDiriPageState extends State<FirstUjiDiriPage> {
               ),
             ),
             SizedBox(height: 20),
-            GestureDetector(
-              onTap: pickRandomString,
-              child: Container(
-                padding: EdgeInsets.all(25),
-                decoration: BoxDecoration(
-                  color: Color(0xFFD6E1FF),
-                  borderRadius: BorderRadius.circular(18),
-                  border: Border.all(
-                    color: Colors.black,
-                    width: 3,
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black,
-                      offset: Offset(5, 5),
-                      blurRadius: 0,
-                      spreadRadius: 1,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                GestureDetector(
+                  onTap: pickRandomString,
+                  child: Container(
+                    padding: EdgeInsets.all(25),
+                    decoration: BoxDecoration(
+                      color: Color(0xFFD6E1FF),
+                      borderRadius: BorderRadius.circular(18),
+                      border: Border.all(
+                        color: Colors.black,
+                        width: 3,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black,
+                          offset: Offset(5, 5),
+                          blurRadius: 0,
+                          spreadRadius: 1,
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                child: Text(
-                  'Pilih tajuk rawak',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.black,
+                    child: Text(
+                      'Pilih tajuk rawak',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black,
+                      ),
+                    ),
                   ),
                 ),
-              ),
+                SizedBox(width: 15),
+                GestureDetector(
+                  onTap: () {
+                    _showUjiDiriHelp(context);
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(25),
+                    decoration: BoxDecoration(
+                      color: Color(0xFFD6E1FF),
+                      borderRadius: BorderRadius.circular(18),
+                      border: Border.all(
+                        color: Colors.black,
+                        width: 3,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black,
+                          offset: Offset(5, 5),
+                          blurRadius: 0,
+                          spreadRadius: 1,
+                        ),
+                      ],
+                    ),
+                    child:
+                        Icon(Icons.question_mark_outlined, color: Colors.black),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
       ),
     );
   }
+}
+
+void _showUjiDiriHelp(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: Text('Ini adalah "Uji Diri"'),
+        content: Text(
+          'Tekan butang "Pilih Tajuk Rawak" dan akan terdapat paparan tajuk yang dipilih secara rawak\n\nketika ketandusan idea, gunakan tajuk tersebut untuk membuat latihan karangan, lisan ataupun lain-lain latihan.',
+        ),
+        actions: <Widget>[
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+              // Perform action for "Yes"
+            },
+            child: Text('Baik!'),
+          ),
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+              // Perform action for "Close"
+            },
+            child: Text('Selamat Mencuba'),
+          ),
+        ],
+      );
+    },
+  );
 }
